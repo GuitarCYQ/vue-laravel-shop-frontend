@@ -443,22 +443,13 @@ const setDefaultAddress = async(id: number) => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/css/common/common.scss';	
-.address-page {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
-}
-
+	
 .container {
-  flex: 1;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 16px;
-  box-sizing: border-box;
+  padding: 30px 16px;
 }
-
 .add-address-btn {
   width: 100%;
   margin-bottom: 20px;

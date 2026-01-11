@@ -413,7 +413,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/common/common.scss";
+@use "@/assets/css/common/common.scss" as *;
 
 // 页面整体样式
 .orders-page {

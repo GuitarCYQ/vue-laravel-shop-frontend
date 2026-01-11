@@ -4,18 +4,22 @@ import axios, { type InternalAxiosRequestConfig, type AxiosResponse } from 'axio
 import { useAuthStore } from '../stores/auth';
 import router from '../router'; // 引入路由实例
 
-//axios.defaults.withCredentials = true; // 允许跨域携带Cookkie/Token
-//axios.defaults.baseURL = 'http://222.186.21.30:8988/api/v1';
+const isLocal = true
+let baseURL 
+if (isLocal) {
+	baseURL = 'http://larabbs.test/api'
+} else {
+	baseURL = 'http://103.242.14.249/api'
+	// baseURL = 'http://222.186.21.30:8988/api'
+}
 
 const api = axios.create({
   // baseURL: 'https://7dac4f3cb204.ngrok-free.app/api',
-   baseURL: 'http://222.186.21.30:8988/api',
-  //baseURL: 'http://222.186.21.30:8988/api',
+  baseURL,
   withCredentials: true,
   timeout: 5000,
   headers: {
     'Accept': 'application/json',
-    
   },
 });
 // 请求拦截
@@ -44,7 +48,7 @@ api.interceptors.response.use(
 	return response;
   },
   (error) => {
-    // 仅处��?401 错误
+
     if (error.response?.status === 401) {
       const authStore = useAuthStore();
       const currentPath = router.currentRoute.value.path; // 获取当前路由路径

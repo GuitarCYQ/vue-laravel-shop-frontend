@@ -38,7 +38,6 @@
     </Header>
 
     <main class="container">
-      <h2 class="page-title">我的购物车</h2>
 
       <!-- 购物车为空 -->
       <div class="cart-empty" v-if="cartItems.length === 0">
@@ -370,10 +369,12 @@ const goToCheckout = () => {
 <style lang="scss" scoped>
 @import '@/assets/css/common/common.scss';
 
-.cart-page {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
+	
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 16px;
 }
 
 

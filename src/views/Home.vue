@@ -372,8 +372,8 @@ const scrollToTop = () => {
 }
 // 监听返回键何时出现
 const handleScroll = () => {
-  console.log('滚动位置:', window.scrollY); // 确认滚动时是否打印
-  console.log('按钮显示状态:', showBackToTop.value); // 观察状态变化
+ // ' console.log('滚动位置:', window.scrollY); // 确认滚动时是否打印
+ //  console.log('按钮显示状态:', showBackToTop.value); // 观察状态变化'
   // 更新激活区块
   activeSection.value = getCurrentSection();
   
@@ -592,6 +592,8 @@ const more = (type: string) => {
 <style lang="scss" scoped>
 @import '@/assets/css/common/common.scss';
 
+	
+
 
 // 轮播图（重点修复部分）
 .banner {
@@ -600,7 +602,8 @@ const more = (type: string) => {
   margin-top: 8px;
   overflow: hidden;
   border-radius: 8px;
-
+  padding: 10px 0px;
+  
   // 轮播容器：限制显示区域，超出部分隐藏
   .banner-container {
     width: 100%;
@@ -798,6 +801,8 @@ const more = (type: string) => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  overflow: hidden;
+  padding-bottom: 20px;
 
   @media (max-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
@@ -1025,11 +1030,11 @@ const more = (type: string) => {
 
 // 新品上市
 .new-arrivals {
-  padding: 32px 0;
+  padding: 32px 0 100px 0;
   background-color: $white;
-  max-height: 500px;
-  height: 500px;
+  height: auto;
   overflow: hidden;
+  
 }
 
 

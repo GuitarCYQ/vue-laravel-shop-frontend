@@ -470,7 +470,7 @@ watch(payModalVisible, (newVal) => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/common/common.scss"; // 复用结算页公共变量（如$primary、$white、$gray等）
+@use "@/assets/css/common/common.scss" as common; // 复用结算页公共变量（如$primary、$white、$gray等）
 
 // 页面整体样式
 .pay-page {
@@ -490,7 +490,7 @@ watch(payModalVisible, (newVal) => {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: $gray-dark;
+  color: common.$gray-dark;
 }
 
 // 步骤指示器（完全复用结算页样式）
@@ -511,7 +511,7 @@ watch(payModalVisible, (newVal) => {
       height: 36px;
       border-radius: 50%;
       background-color: #ddd;
-      color: $gray;
+      color: common.$gray;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -521,16 +521,16 @@ watch(payModalVisible, (newVal) => {
 
     .step-text {
       font-size: 14px;
-      color: $gray;
+      color: common.$gray;
     }
 
     &.active {
       .step-icon {
-        background-color: $primary;
+        background-color: common.$primary;
         color: white;
       }
       .step-text {
-        color: $primary;
+        color: common.$primary;
       }
     }
   }
@@ -542,7 +542,7 @@ watch(payModalVisible, (newVal) => {
     max-width: 100px;
 
     &.active {
-      background-color: $primary;
+      background-color: common.$primary;
     }
   }
 }
@@ -560,7 +560,7 @@ watch(payModalVisible, (newVal) => {
 
   // 支付卡片公共样式（统一卡片风格）
   .pay-section {
-    background-color: $white;
+    background-color: common.$white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -571,8 +571,8 @@ watch(payModalVisible, (newVal) => {
       font-weight: 600;
       margin-bottom: 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid $gray-light;
-      color: $gray-dark;
+      border-bottom: 1px solid common.$gray-light;
+      color: common.$gray-dark;
     }
   }
 
@@ -590,12 +590,12 @@ watch(payModalVisible, (newVal) => {
 
         .label {
           width: 100px;
-          color: $gray;
+          color: common.$gray;
           flex-shrink: 0;
         }
 
         .value {
-          color: $gray-dark;
+          color: common.$gray-dark;
           line-height: 1.5;
 
           &.status-unpaid {
@@ -613,7 +613,7 @@ watch(payModalVisible, (newVal) => {
         display: flex;
         align-items: center;
         padding: 12px 16px;
-        border: 1px solid $gray-light;
+        border: 1px solid common.$gray-light;
         border-radius: 6px;
         margin-bottom: 12px;
         cursor: pointer;
@@ -625,8 +625,8 @@ watch(payModalVisible, (newVal) => {
 
         // 选中状态（与结算页选择框风格一致）
         &.active {
-          border-color: $primary;
-          background-color: rgba($primary, 0.05);
+          border-color: common.$primary;
+          background-color: rgba(common.$primary, 0.05);
         }
 
         // 禁用状态
@@ -662,13 +662,13 @@ watch(payModalVisible, (newVal) => {
 
           .method-name {
             font-size: 14px;
-            color: $gray-dark;
+            color: common.$gray-dark;
             margin-bottom: 4px;
           }
 
           .method-desc {
             font-size: 12px;
-            color: $gray;
+            color: common.$gray;
           }
         }
 
@@ -695,7 +695,7 @@ watch(payModalVisible, (newVal) => {
 
       .amount-label {
         font-size: 14px;
-        color: $gray;
+        color: common.$gray;
         margin-bottom: 8px;
         display: block;
       }
@@ -712,7 +712,7 @@ watch(payModalVisible, (newVal) => {
       display: flex;
       align-items: center;
       font-size: 12px;
-      color: $gray;
+      color: common.$gray;
       margin-bottom: 20px;
 
       el-icon {
@@ -734,7 +734,7 @@ watch(payModalVisible, (newVal) => {
     .btn-confirm-pay {
       width: 100%;
       height: 44px;
-      background-color: $primary;
+      background-color: common.$primary;
       color: white;
       border: none;
       border-radius: 6px;
@@ -746,16 +746,16 @@ watch(payModalVisible, (newVal) => {
       position: relative;
 
       &:disabled {
-        background-color: $gray-light;
+        background-color: common.$gray-light;
         cursor: not-allowed;
       }
 
       &:hover:not(:disabled) {
-        background-color: darken($primary, 10%); //  hover时加深颜色
+        background-color: #ff9f43; //  hover时加深颜色
       }
 
       &.loading {
-        background-color: darken($primary, 5%);
+        background-color: #ff9f43;
 
         span {
           animation: pulse 1.5s ease-in-out infinite;
@@ -770,7 +770,7 @@ watch(payModalVisible, (newVal) => {
       font-size: 14px;
 
       .action-link {
-        color: $primary;
+        color: common.$primary;
         cursor: pointer;
 
         &:hover {
@@ -811,7 +811,7 @@ watch(payModalVisible, (newVal) => {
 
     .tip-line {
       font-size: 12px;
-      color: $gray-dark;
+      color: common.$gray-dark;
       margin-bottom: 8px;
       line-height: 1.5;
 
@@ -833,7 +833,7 @@ watch(payModalVisible, (newVal) => {
 
     .status-text {
       font-size: 12px;
-      color: $gray;
+      color: common.$gray;
       text-align: center;
     }
   }

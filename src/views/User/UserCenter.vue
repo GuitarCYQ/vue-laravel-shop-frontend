@@ -110,7 +110,7 @@
           </el-table>
 
           <el-link
-            href="/user/orders"
+            href="/orders"
             class="view-all"
             style="display: block; text-align: center; margin-top: 10px"
           >
@@ -337,23 +337,11 @@ const logout = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/common/common.scss";
-.user-center {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #f5f5f5;
-  min-height: 100vh;
-}
+@import  '@/assets/css/common/common.scss';
+
 
 main {
-  padding: 30px 0;
-
-  .user-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
+  // padding: 30px 0;
   // 用户信息卡片
   .user-profile-card {
     .user-profile {

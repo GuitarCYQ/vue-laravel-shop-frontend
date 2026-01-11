@@ -434,23 +434,6 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
-/* // 引入公共样式变量（与支付页、结算页共用） */
-@import '@/assets/css/common/common.scss';
-
-
-// /* // 页面整体样式 */
-// .order-list-page {
-//   background-color: $gray-light;
-//   min-height: 100vh;
-// }
-
-/* // 容器样式（与其他页面保持一致的宽度和边距） */
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px 16px;
-}
 
 /* // 页面标题（统一标题风格：字号、字重、颜色） */
 .page-title {
