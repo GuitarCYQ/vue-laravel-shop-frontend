@@ -4,7 +4,7 @@ import axios, { type InternalAxiosRequestConfig, type AxiosResponse } from 'axio
 import { useAuthStore } from '../stores/auth';
 import router from '../router'; // 引入路由实例
 
-const isLocal = true
+const isLocal = false
 let baseURL 
 if (isLocal) {
 	baseURL = 'http://larabbs.test/api'
