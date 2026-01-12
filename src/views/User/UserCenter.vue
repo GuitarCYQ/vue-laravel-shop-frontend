@@ -339,6 +339,12 @@ const logout = () => {
 <style lang="scss" scoped>
 @import  '@/assets/css/common/common.scss';
 
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
 
 main {
   // padding: 30px 0;
