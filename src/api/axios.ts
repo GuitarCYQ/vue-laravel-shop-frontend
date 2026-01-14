@@ -14,7 +14,7 @@ import router from '../router'; // 引入路由实例
 // }
 
 // 自动识别环境
-const baseURL = import.meta.env.VITE_BASE_URL;
+const baseURL = import.meta.env.VITE_BASE_URL; 
 
 const api = axios.create({
   // baseURL: 'https://7dac4f3cb204.ngrok-free.app/api',
