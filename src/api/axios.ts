@@ -4,14 +4,17 @@ import axios, { type InternalAxiosRequestConfig, type AxiosResponse } from 'axio
 import { useAuthStore } from '../stores/auth';
 import router from '../router'; // 引入路由实例
 
-const isLocal = true
-let baseURL 
-if (isLocal) {
-	baseURL = 'http://larabbs.test/api'
-} else {
-	baseURL = 'http://103.242.14.249/api'
-	// baseURL = 'http://222.186.21.30:8988/api'
-}
+// const isLocal = true
+// let baseURL 
+// if (isLocal) {
+// 	baseURL = 'http://larabbs.test/api'
+// } else {
+// 	baseURL = 'http://103.242.14.249/api'
+// 	// baseURL = 'http://222.186.21.30:8988/api'
+// }
+
+// 自动识别环境
+const baseURL = import.meta.env.VITE_BASE_URL;
 
 const api = axios.create({
   // baseURL: 'https://7dac4f3cb204.ngrok-free.app/api',
